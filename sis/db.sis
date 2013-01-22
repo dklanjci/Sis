@@ -1,0 +1,20 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	sis.foi. admin.sis.foi. (
+		 	2013011804	; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	dns.sis.foi.
+@	IN	MX 10	dns.sis.foi.
+dns	IN	A	192.168.1.207
+mail	IN	CNAME	dns
+www	IN	CNAME	dns
+webmail IN	CNAME	dns
+@	IN	A	192.168.1.207
+mail._domainkey.sis.foi. IN TXT  "v=DKIM1; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDUY2gDHTj8BcAKug35VMudWXWwBIiOma1hT+QEdZDb0rHIaUBHZ3dogsd4ge2fzGG4OZop2FAOtxdUYGRlLizbs440qTh5oFtqzw9l29y4cb03lRtSS+QrrQVJKK4ok4JSIo2P2mgT0+qWg9HF94MVhWgCRVDjFNc4K7lKwjmyawIDAQAB;"
+
